@@ -2,6 +2,8 @@
 
 A vibrant neon-themed configuration for [Zebar](https://github.com/glzr-io/zebar).
 
+![preview](img/image1.png)
+
 ## Installation
 
 1. **Navigate to Zebar config directory**
@@ -13,13 +15,15 @@ A vibrant neon-themed configuration for [Zebar](https://github.com/glzr-io/zebar
    ```bash
    git clone https://github.com/echosonusharma/zebar_neon_theme.git
    ```
-   ![terminal](img/image.png)
+  ![terminal](img/image.png)
    
 3. **Apply the theme**
    - Reload Zebar
    - Open Zebar settings
    - Select "zebar_neon_theme"
    - Close current widget and apply
+
+  ![zebar_setting](img/image2.png)
 
 ## Customization
 
