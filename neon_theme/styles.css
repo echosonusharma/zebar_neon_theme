@@ -1,0 +1,208 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+i {
+  color: rgb(0 255 255 / 100%);
+  margin-right: 7px;
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+}
+
+body {
+  color: rgb(255 255 255 / 100%);
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  border-bottom: 1px solid rgb(0 255 255 / 40%);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 20px rgb(0 255 255 / 20%);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 4px 0.3vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+  background: rgb(20 20 30 / 80%);
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgb(0 255 255 / 30%);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: rgb(255 255 255 / 100%);
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+  border: 1px solid rgb(0 255 255 / 30%);
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery,
+.weather,
+.audio,
+.disk {
+  margin-right: 12px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: rgb(20 20 30 / 80%);
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: rgb(255 255 255 / 100%);
+  border: 1px solid rgb(0 255 255 / 30%);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgb(0 255 255 / 20%);
+
+  &.displayed {
+    background: rgb(20 20 30 / 50%);
+    box-shadow: 0 0 15px rgb(0 255 255 / 30%);
+  }
+
+  &.focused,
+  &:hover {
+    background: rgb(0 255 255 / 40%);
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+    box-shadow: 0 0 20px rgb(0 255 255 / 40%);
+    border: 1px solid rgb(0 255 255 / 60%);
+  }
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: rgb(20 20 30 / 80%);
+  color: rgb(255 255 255 / 100%);
+  border-radius: 4px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 1px solid rgb(0 255 255 / 30%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgb(0 255 255 / 20%);
+
+  &:hover {
+    background: rgb(0 255 255 / 40%);
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+    box-shadow: 0 0 20px rgb(0 255 255 / 40%);
+    border: 1px solid rgb(0 255 255 / 60%);
+  }
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: rgb(0 255 255 / 100%);
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+  color: rgb(0 255 255 / 100%);
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+}
+
+.network, .memory, .cpu, .battery, .weather, .audio, .disk {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: rgb(255 255 255 / 100%);
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  background: rgb(20 20 30 / 80%);
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgb(0 255 255 / 30%);
+  border: 1px solid rgb(0 255 255 / 30%);
+}
+
+.network {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.network .traffic {
+  display: flex;
+  gap: 4px;
+  font-size: 0.85em;
+  margin-left: 4px;
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+}
+
+.network .download {
+  color: rgb(0 255 255 / 100%);
+}
+
+.network .upload {
+  color: rgb(0 255 255 / 100%);
+}
+
+.audio .muted {
+  color: rgb(255 0 0 / 100%);
+  text-shadow: 0 0 10px rgb(255 0 0 / 80%);
+}
