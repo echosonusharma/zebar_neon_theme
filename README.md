@@ -25,6 +25,20 @@ A vibrant neon-themed configuration for [Zebar](https://github.com/glzr-io/zebar
 
   ![zebar_setting](img/image2.png)
 
+4. **Set neon theme as default**
+   - update the `settings.json` in the zebar config directory to -
+   ```json
+   {
+      "$schema": "https://github.com/glzr-io/zebar/raw/v2.4.0/resources/settings-schema.json",
+      "startupConfigs": [
+         {
+            "path": "zebar_neon_theme/index.zebar.json",
+            "preset": "default"
+         }
+      ]
+   }
+   ```
+
 ## Customization
 
 Edit `styles.css` to customize colors, fonts, or layout.
