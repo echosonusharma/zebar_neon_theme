@@ -65,6 +65,24 @@ body,
   border: 1px solid rgb(0 255 255 / 30%);
 }
 
+.center .date {
+  font-weight: 600;
+  color: rgb(255 255 255 / 100%);
+}
+
+.center .separator {
+  margin: 0 8px;
+  color: rgb(0 255 255 / 60%);
+  font-weight: bold;
+}
+
+.center .process {
+  font-weight: 400;
+  color: rgb(0 255 255 / 90%);
+  text-transform: capitalize;
+  font-size: 0.95em;
+}
+
 .right {
   justify-self: end;
 }
@@ -158,7 +176,13 @@ body,
   text-shadow: 0 0 10px rgb(0 255 255 / 80%);
 }
 
-.network, .memory, .cpu, .battery, .weather, .audio, .disk {
+.network,
+.memory,
+.cpu,
+.battery,
+.weather,
+.audio,
+.disk {
   background: transparent;
   padding: 0;
   border-radius: 0;

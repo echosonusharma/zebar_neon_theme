@@ -161,7 +161,15 @@
             )}
           </div>
 
-          <div className="center">{output.date?.formatted}</div>
+          <div className="center">
+            <span className="date">{output.date?.formatted}</span>
+            {output.glazewm?.focusedContainer?.processName && (
+              <>
+                <span className="separator">•</span>
+                <span className="process">{output.glazewm?.focusedContainer?.processName}</span>
+              </>
+            )}
+          </div>
 
           <div className="right">
             <div className="status-box">
