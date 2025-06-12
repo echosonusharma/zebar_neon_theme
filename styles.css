@@ -167,15 +167,6 @@ body,
   position: relative;
 }
 
-.battery .charging-icon {
-  position: absolute;
-  font-size: 7px;
-  left: -8px;
-  top: 3px;
-  color: rgb(0 255 255 / 100%);
-  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
-}
-
 .network,
 .memory,
 .cpu,
@@ -229,4 +220,36 @@ body,
 .audio .muted {
   color: rgb(255 0 0 / 100%);
   text-shadow: 0 0 10px rgb(255 0 0 / 80%);
+}
+
+.charging {
+  animation: pulse-charging 2s ease-in-out infinite;
+}
+
+.nf-md-power_plug.charging {
+  font-size: 0.6em;
+  margin-right: 2px;
+  position: relative;
+  top: -1px;
+}
+
+.low-battery {
+  color: rgb(255 0 0 / 100%) !important;
+  text-shadow: 0 0 10px rgb(255 0 0 / 80%) !important;
+}
+
+.full-battery {
+  color: rgb(0 255 0 / 100%) !important;
+  text-shadow: 0 0 10px rgb(0 255 0 / 80%) !important;
+}
+
+@keyframes pulse-charging {
+  0%, 100% {
+    color: rgb(0 255 0 / 100%);
+    text-shadow: 0 0 10px rgb(0 255 0 / 80%);
+  }
+  50% {
+    color: rgb(0 255 0 / 60%);
+    text-shadow: 0 0 15px rgb(0 255 0 / 90%);
+  }
 }

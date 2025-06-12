@@ -77,15 +77,36 @@
 
       // Get icon to show for how much of the battery is charged.
       function getBatteryIcon(batteryOutput) {
+        let batteryClass = '';
+        let batteryIcon;
+        
+        if (batteryOutput.chargePercent === 100) {
+          batteryClass = ' full-battery';
+        } else if (batteryOutput.chargePercent <= 20) {
+          batteryClass = ' low-battery';
+        }
+        
         if (batteryOutput.chargePercent > 90)
-          return <i className="nf nf-fa-battery_4"></i>;
-        if (batteryOutput.chargePercent > 70)
-          return <i className="nf nf-fa-battery_3"></i>;
-        if (batteryOutput.chargePercent > 40)
-          return <i className="nf nf-fa-battery_2"></i>;
-        if (batteryOutput.chargePercent > 20)
-          return <i className="nf nf-fa-battery_1"></i>;
-        return <i className="nf nf-fa-battery_0"></i>;
+          batteryIcon = <i className={`nf nf-fa-battery_4${batteryClass}`}></i>;
+        else if (batteryOutput.chargePercent > 70)
+          batteryIcon = <i className={`nf nf-fa-battery_3${batteryClass}`}></i>;
+        else if (batteryOutput.chargePercent > 40)
+          batteryIcon = <i className={`nf nf-fa-battery_2${batteryClass}`}></i>;
+        else if (batteryOutput.chargePercent > 20)
+          batteryIcon = <i className={`nf nf-fa-battery_1${batteryClass}`}></i>;
+        else
+          batteryIcon = <i className={`nf nf-fa-battery_0${batteryClass}`}></i>;
+        
+        if (batteryOutput.isCharging) {
+          return (
+            <>
+              <i className="nf nf-md-power_plug charging"></i>
+              {batteryIcon}
+            </>
+          );
+        }
+        
+        return batteryIcon;
       }
 
       // Get icon to show for current weather status.
@@ -237,9 +258,6 @@
 
               {output.battery && (
                 <div className="battery">
-                  {output.battery.isCharging && (
-                    <i className="nf nf-md-power_plug charging-icon"></i>
-                  )}
                   {getBatteryIcon(output.battery)}
                   {Math.round(output.battery.chargePercent)}%
                 </div>
