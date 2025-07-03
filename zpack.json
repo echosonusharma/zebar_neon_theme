@@ -18,10 +18,9 @@
       "shownInTaskbar": false,
       "focused": false,
       "resizable": false,
-      "transparent": false,
+      "transparent": true,
       "includeFiles": [
-        "*.html",
-        "*.css"
+        "**/**"
       ],
       "caching": {
         "defaultDuration": 604800,
