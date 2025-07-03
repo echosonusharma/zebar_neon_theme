@@ -2,6 +2,9 @@
 
 A vibrant neon-themed configuration for [Zebar](https://github.com/glzr-io/zebar).
 
+> [!NOTE]  
+> This theme was created before the Zebar Marketplace existed, so the guide below was for manual installation.
+
 ![preview](img/image1.png)
 
 ## Installation
