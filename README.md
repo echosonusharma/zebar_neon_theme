@@ -32,10 +32,11 @@ A vibrant neon-themed configuration for [Zebar](https://github.com/glzr-io/zebar
    - update the `settings.json` in the zebar config directory to -
    ```json
    {
-      "$schema": "https://github.com/glzr-io/zebar/raw/v2.4.0/resources/settings-schema.json",
+      "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/settings-schema.json",
       "startupConfigs": [
          {
-            "path": "zebar_neon_theme/index.zebar.json",
+            "pack": "zebar_neon_theme",
+            "widget": "index",
             "preset": "default"
          }
       ]
